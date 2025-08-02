@@ -6,7 +6,6 @@ const Project = ({
   description,
   subDescription,
   href,
-  image,
   tags,
   setPreview,
 }) => {
@@ -14,8 +13,8 @@ const Project = ({
   return (
     <>
       <div
-        className="flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0"
-        onMouseEnter={() => setPreview(image)}
+        className="flex-wrap items-center justify-between py-10 space-y-10 sm:flex sm:space-y-0"
+        onMouseEnter={() => setPreview()}
         onMouseLeave={() => setPreview(null)}
       >
         <div>
@@ -40,7 +39,6 @@ const Project = ({
           title={title}
           description={description}
           subDescription={subDescription}
-          image={image}
           tags={tags}
           href={href}
           closeModal={() => setIsHidden(false)}
